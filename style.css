@@ -1,0 +1,172 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #667eea, #764ba2);
+    --card-bg: rgba(255, 255, 255, 0.15);
+    --text-color: #ffffff;
+    --option-bg: rgba(255,255,255,0.25);
+}
+
+body.light {
+    --bg-gradient: linear-gradient(135deg, #fdfbfb, #ebedee);
+    --card-bg: #ffffff;
+    --text-color: #111111;
+    --option-bg: #f1f1f1;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #5ad244, #be3434);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+}
+
+/* Quiz Card */
+.quiz-container {
+    width: 360px;
+    padding: 25px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.quiz-container h1 {
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+/* Timer */
+#timer {
+    font-size: 14px;
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+#progress {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #36c0a4, #a934c9);
+    transition: width 1s linear;
+}
+
+/* Question */
+#question-container {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Options */
+#options-container button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background: var(--option-bg);
+    color: var(--text-color);
+}
+
+#options-container button:hover {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.03);
+}
+
+#options-container button:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+/* Control Buttons */
+#nextBtn,
+#restartBtn {
+    margin-top: 18px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0eb787, #b0166d);
+    color: #111;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#nextBtn:hover,
+#restartBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 10, 9, 0.4);
+}
+
+/* Score Text */
+h2 {
+    margin-top: 15px;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit;
+}
+#confetti {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background: red;
+    top: -10px;
+    opacity: 0.9;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
