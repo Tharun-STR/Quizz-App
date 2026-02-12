@@ -21,6 +21,22 @@ const questions = [
         question: "Which is not a JavaScript data type?",
         options: ["Number", "String", "Boolean", "Character"],
         correctAnswer: 3
+    },
+    {
+        question:"Which company developed JavaScript?",
+        options: ["Netscape", "Bell Labs", "Sun Microsystems", "IBM"],
+        correctAnswer: 0
+
+    },
+    {
+        question: "Which symbol is used for comments in JavaScript?",
+        options: ["//", "/* */", "#", "<!-- -->"],
+        correctAnswer: 0
+    },
+    {
+        question: "Which method is used to add an element at the end of an array in JavaScript?",
+        options: ["push()", "pop()", "shift()", "unshift()"],
+        correctAnswer: 0
     }
 ];
 
