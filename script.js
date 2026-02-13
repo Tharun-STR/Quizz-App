@@ -33,6 +33,12 @@ const questions = [
         options: ["//", "/* */", "#", "<!-- -->"],
         correctAnswer: 0
     },
+    { 
+        question: "What is the output of 'typeof null' in JavaScript?",
+        options: ["object", "null", "undefined", "boolean"],
+        correctAnswer: 0    
+
+    },
     {
         question: "Which method is used to add an element at the end of an array in JavaScript?",
         options: ["push()", "pop()", "shift()", "unshift()"],
